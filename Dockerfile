@@ -7,9 +7,9 @@ ENV TERM=xterm-256color
 RUN sed -i "s/http:\/\/archive./http:\/\/pl.archive./g" /etc/apt/sources.list
 
 RUN apt-get update && \
-    apt-get install \
+    apt-get install -y \
     -o APT::Install-Recommended=false -o APT::Install-Suggests=false \
-    python python-virtualenv -y
+    python python-virtualenv
 
 # Create Virtual environment
 # Upgrade PIP in virtualenvironemnt to latest version
