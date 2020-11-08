@@ -9,7 +9,7 @@ RUN sed -i "s/http:\/\/archive./http:\/\/pl.archive./g" /etc/apt/sources.list
 RUN apt-get update && \
     apt-get install -y \
     -o APT::Install-Recommended=false -o APT::Install-Suggests=false \
-    python python-virtualenv
+    python python-virtualenv libpython2.7 python-mysqldb
 
 # Create Virtual environment
 # Upgrade PIP in virtualenvironemnt to latest version
